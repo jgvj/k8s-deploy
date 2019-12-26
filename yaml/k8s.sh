@@ -1,2 +1,3 @@
-Kubectl apply -f tomcat-rc.yaml
-Kubectl apply -f tomcat-service.yaml
+#kubetcl create namespace test
+kubectl apply -f tomcat-rc.yaml --namespace=test
+kubectl apply -f tomcat-service.yaml --namespace=test
