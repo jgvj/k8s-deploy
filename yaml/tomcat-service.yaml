@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: petclinic-tester
+spec:
+  selector:
+    app: petclinic-tester
+  ports:
+  - name: petclinic-svc
+    port: 8080
+    targetPort: 8080
+    nodePort: 32100
+  - name: petclinic-svc2
+    port: 6300
+    targetPort: 6300
+    nodePort: 32101
+  type: NodePort
+
