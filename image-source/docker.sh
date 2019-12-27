@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t tomcat-jacoco .
+docker build -f ./image-source/Dockerfile -t tomcat-jacoco .
