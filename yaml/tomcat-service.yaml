@@ -9,10 +9,10 @@ spec:
   - name: petclinic-svc1
     port: 8080
     targetPort: 8080
-    nodePort: 33200
+    nodePort: 32111
   - name: petclinic-svc2
     port: 6300
     targetPort: 6300
-    nodePort: 33201
+    nodePort: 32112
   type: NodePort
 
