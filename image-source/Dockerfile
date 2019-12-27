@@ -1,6 +1,6 @@
 FROM tomcat:latest
-ADD catalina.sh  /usr/local/tomcat/bin
-ADD org.jacoco.agent-0.7.9-runtime.jar /usr/local/tomcat/lib
+ADD ./image-source/catalina.sh  /usr/local/tomcat/bin
+ADD ./image-source/org.jacoco.agent-0.7.9-runtime.jar /usr/local/tomcat/lib
 
 EXPOSE 8080
 
