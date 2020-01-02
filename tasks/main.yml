@@ -18,6 +18,11 @@
 #     src: image-source
 #     dest: "{{ remote_project_dir }}/"
 
+- name: copy war source file to vm
+  copy:
+    src: "{{ source_war_path }}"
+    dest: "{{ remote_project_dir }}/"
+
 - name: copy k8s files to remote server
   copy:
     src: yaml
