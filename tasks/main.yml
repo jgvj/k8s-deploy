@@ -18,11 +18,12 @@
 #     src: image-source
 #     dest: "{{ remote_project_dir }}/"
 
-- name: copy jacoco required files to remote server
+- name: copy k8s files to remote server
   copy:
     src: yaml
     dest: "{{ remote_project_dir }}/"
 
 - name: run k8s to deploy tomcat with war
   shell: "cd pipeline"
+  shell: "chmod 755 {{ remote_project_dir }}/yaml/k8s.sh"
   shell: "{{ remote_project_dir }}/yaml/k8s.sh"
