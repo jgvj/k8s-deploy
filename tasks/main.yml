@@ -22,8 +22,7 @@
   copy:
     src: yaml
     dest: "{{ remote_project_dir }}/"
+    mode: 0777
 
 - name: run k8s to deploy tomcat with war
-  shell: "cd pipeline"
-  shell: "chmod 755 {{ remote_project_dir }}/yaml/k8s.sh"
-  shell: "{{ remote_project_dir }}/yaml/k8s.sh"
+  shell: "cd {{ remote_project_dir }} && {{ remote_project_dir }}/yaml/k8s.sh"
