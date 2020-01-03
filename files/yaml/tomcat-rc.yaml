@@ -15,7 +15,7 @@ spec:
         - name: testsecret 
       containers:   
       - image: daocloud.io/devops2019/tomcat-jacoco:latest #kubeguide/tomcat-app:v1 
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: petclinic-jenkins   
         ports:
         - containerPort:  8080
