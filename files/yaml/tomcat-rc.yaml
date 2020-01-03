@@ -11,9 +11,11 @@ spec:
      labels:      
       app: petclinic-jenkins
     spec:
+      imagePullSecrets:
+        - name: testsecret 
       containers:   
-      - image: tomcat-jacoco #kubeguide/tomcat-app:v1 
-        imagePullPolicy: Never
+      - image: daocloud.io/devops2019/tomcat-jacoco:latest #kubeguide/tomcat-app:v1 
+        imagePullPolicy: IfNotPresent
         name: petclinic-jenkins   
         ports:
         - containerPort:  8080
@@ -30,3 +32,4 @@ spec:
       - name: war
         hostPath:
           path: /home/ubuntu/pipeline/
+      
