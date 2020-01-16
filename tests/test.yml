@@ -1,6 +1,6 @@
 ---
-- hosts: testvm1
-  remote_user: ubuntu
+- hosts: localhost
+  remote_user: sqemacbook1
   roles:
     - k8s-deploy
 
