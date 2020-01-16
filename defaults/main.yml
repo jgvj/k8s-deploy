@@ -1,8 +1,8 @@
 ---
 # defaults file for petclinic-deploy
 
-#root_dir: /Users/liujie
-root_dir: /home/ubuntu
+root_dir: /Users/sqemacbook1
+#root_dir: /home/ubuntu
 
 tomcat_dir: "{{ root_dir }}/Library/tomcat"
 
